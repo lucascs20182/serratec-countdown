@@ -97,6 +97,10 @@ footer > p{
     color: white;
 }
 
+.author a {
+    color: white;
+}
+
 @media only screen and (max-width: 698px) {
     .bg{
         background-position: center bottom;
