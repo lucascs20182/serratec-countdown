@@ -64,13 +64,13 @@ header{
     color: white;
 }
 
-.days,.hours,.minutes,.seconds{
+.mounths, .days,.hours,.minutes,.seconds{
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-#days-count,#hours-count,#minutes-count,#seconds-count{
+#mounths-count, #days-count,#hours-count,#minutes-count,#seconds-count{
     font-family: 'Open Sans', sans-serif;
     font-size: 5rem;
 }

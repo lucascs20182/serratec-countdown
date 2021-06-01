@@ -1,28 +1,24 @@
+const mounthsLeft = document.getElementById("mounths-count");
 const daysLeft = document.getElementById("days-count");
 const hoursLeft = document.getElementById("hours-count");
 const minutesLeft = document.getElementById("minutes-count");
 const secondsLeft = document.getElementById("seconds-count");
 
-const newYears = '1 Jan 2022';
-
-let countdown = () =>{
-    const newYearsDate = new Date(2021, 08, 01);
+const countdown = () =>{
+    const serratecEnds = new Date(2021, 08, 01);
     const currentDate = new Date();
-
-    const totalseconds = (newYearsDate - currentDate) / 1000;
-    const days = Math.floor(totalseconds / 3600 / 24);
-    const hours = Math.floor(totalseconds / 3600) % 24;
-    const minutes = Math.floor(totalseconds / 60) % 60;
-    const seconds = Math.floor(totalseconds) % 60;
-
-    daysLeft.innerHTML = days;
-    hoursLeft.innerHTML = formatTime(hours);
-    minutesLeft.innerHTML = formatTime(minutes);
-    secondsLeft.innerHTML = formatTime(seconds);
+    
+    const differenceBetweenDates = new Date(serratecEnds - currentDate);
+    
+    mounthsLeft.innerHTML = differenceBetweenDates.getMonth() - 1;
+    daysLeft.innerHTML = differenceBetweenDates.getDate();
+    hoursLeft.innerHTML = differenceBetweenDates.getHours();
+    minutesLeft.innerHTML = differenceBetweenDates.getMinutes();
+    secondsLeft.innerHTML = differenceBetweenDates.getSeconds();
 }
 
-let formatTime = time =>{
-   return time < 10? (`0${time}`) : time;
+const formatTime = time => {
+   return time < 10? `0${time}` : time;
 }
 
 countdown();
