@@ -4,7 +4,7 @@ const hoursLeft = document.getElementById("hours-count");
 const minutesLeft = document.getElementById("minutes-count");
 const secondsLeft = document.getElementById("seconds-count");
 
-const countdown = () =>{
+const countdown = () => {
     const serratecEnds = new Date(2021, 08, 01);
     const currentDate = new Date();
     
@@ -20,6 +20,8 @@ const countdown = () =>{
 const formatTime = time => {
    return time < 10? `0${time}` : time;
 }
+
+
 
 countdown();
 
