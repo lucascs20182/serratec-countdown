@@ -10,7 +10,9 @@ const countdown = () => {
     
     const differenceBetweenDates = new Date(serratecEnds - currentDate);
     
+    // January starts from index 0
     mounthsLeft.innerHTML = differenceBetweenDates.getMonth() - 1;
+
     daysLeft.innerHTML = differenceBetweenDates.getDate();
     hoursLeft.innerHTML = differenceBetweenDates.getHours();
     minutesLeft.innerHTML = differenceBetweenDates.getMinutes();
@@ -20,8 +22,6 @@ const countdown = () => {
 const formatTime = time => {
    return time < 10? `0${time}` : time;
 }
-
-
 
 countdown();
 
